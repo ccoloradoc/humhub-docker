@@ -4,8 +4,8 @@ services:
     build: nginx
     volumes:
       - ./data/log/nginx:/var/log/nginx/
-      - ./data/log/humhub:/var/www/concamin/logs
-      - ./concamin:/var/www/concamin
+      - ./data/log/humhub:/var/www/portal/logs
+      - ./portal:/var/www/portal
     ports:
       - "80:80"
     tty: true

@@ -3,18 +3,34 @@ Minimalist docker setup for running Humhub instance
 
 ## Instructions
 
-1. Humhub Setup
-This step will download humhub installation from provider portal, unzip it in the needed folder and copy configuration files.
+1. Humhub Initalization:
+This step will download humhub installation from provider portal, unzip it in the needed folder.
 ```
-sh setup.sh
+sh initalize.sh
 ```
 
-2. Build and deploy instance
+2. Build and deploy instance:
 This step will build the docker images needed to run the instance and bring up.`
 ```
 docker-compose build
 docker-compose up
 ```
+
+3. Humhub configuration:
+The first time you bring up your instance humhub will ask you to define details about your instance, for database use below detais:
+```
+url: mysql
+user: humhub
+password: humhub
+database: humhub
+```
+
+4. Configuration:
+Once you have configured successfully your instance run below script in order to make url work better
+```
+sh setup.sh
+```
+
 
 ## Licence
 
